@@ -66,6 +66,18 @@ def get_data():
     tables = make_tables(df_raw)
     return df_raw, tables
 
+pages = {
+    "Rocket League": [
+        st.Page(
+            "sections/dashboard_2v2.py",
+            title="Analyse 2v2",
+            icon="📊",
+        ),
+    ],
+}
+
+navigation = st.navigation(pages)
+navigation.run()
 
 st.title("Rocket League: What Makes a Winning Team?")
 st.caption(
